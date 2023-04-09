@@ -7,6 +7,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 
+
 function Register() {
     const [firstname,setFirstname]=useState('')
     const [lastname,setLastname]=useState('')
@@ -16,8 +17,8 @@ function Register() {
     async function handleRegister(ev){
         ev.preventDefault()
         try{
-            await axios.post('/register',{firstname,lastname,username,email})
-            alert('Registration successful.')
+            await axios.post('/create',{firstname,lastname,username,email})
+            alert('Registration successful. Login to continue')
         }catch(e){
             alert('Registration failed')
         }
@@ -57,10 +58,9 @@ function Register() {
                                 placeholder={'your username'}
                                 onChange={(e)=>setUsername(e.target.value)}
                             />
-                            <Link to='/user'>
+                            <Link to='/login'>
                             <button className='register_login '>Register Now</button>
-                            </Link>
-                            
+                            </Link>                  
                         </form>
                     </div>
                 </div>

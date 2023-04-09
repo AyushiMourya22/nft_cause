@@ -1,0 +1,12 @@
+b#ro_heading{
+    font-size: 3rem;
+    color: white;
+    background-color: aqua;
+    z-index: 6;
+}
+.bro_main{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem 3rem;
+    flex-wrap: wrap;
+}

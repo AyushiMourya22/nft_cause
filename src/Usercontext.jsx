@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 
 
 export const UserContext=createContext({})
-export function UserContectProvider({children}){
+export function UserContextProvider({children}){
     const [user,setUser]=useState(null)
     useEffect(()=>{
         if(!user){

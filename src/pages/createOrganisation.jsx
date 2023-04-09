@@ -21,7 +21,7 @@ function CreateOrganisation() {
     async function handleSubmit(ev){
         ev.preventDefault()
         try{
-            const userName=await axios.post('/login',{organisationName,founderFirst,founderLast,walletAddress,bannerUrl})
+            const userName=await axios.post('/orgs/add',{organisationName,founderFirst,founderLast,walletAddress,bannerUrl})
             alert('Created a New Organisation')
             // setRedirect(true)
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import logo from '../assets/logo'
 import User_navbar from '../components/userDown/user_navbar'
 import './User.css'
@@ -8,9 +8,11 @@ import StarsCanvas from '../components/canvas/Stars'
 import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import { AiOutlineUser } from 'react-icons/ai'
-
+import { UserContext } from '../Usercontext'
 
 const User = () => {
+  const {user,setuser}=useContext(UserContext)
+  
 
   return (
     <div className='user' >

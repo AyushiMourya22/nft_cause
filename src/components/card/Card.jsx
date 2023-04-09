@@ -1,5 +1,6 @@
 import React from 'react'
 import "./card.css"
+import { Link } from 'react-router-dom'
 
 function Card(props) {
   return (
@@ -14,7 +15,12 @@ function Card(props) {
             <p>{props.founder}</p>
             <h3>{props.estYear}</h3>
             
-            <a href="#">Buy Now</a>
+            <Link href="#">
+              <button>
+
+              Buy Now
+              </button>
+              </Link>
         </div>
 
 </div>

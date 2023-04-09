@@ -1,27 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './login.css'
 import logo from '../assets/logo.png'
 import { Link, Navigate } from 'react-router-dom'
 import StarsCanvas from '../components/canvas/Stars'
 import { useState } from 'react'
 import axios from 'axios'
+import { UserContext } from '../Usercontext'
+
 function Login() {
     const [username, setUsername] = useState('')
     const [redirect, setRedirect] = useState(false)
+    const {setuser}=useContext(UserContext)
 
     async function handleLoginSubmit(ev) {
         ev.preventDefault()
         try {
-            const userName = await axios.post('/login', { username })
+            const userName = await axios.get('/user/:uid', { username })
             alert('Login successful')
+            setuser(userName.data)
             setRedirect(true)
-
         } catch (e) {
             alert('Login failed')
         }
     }
     if (redirect) {
-        return <Navigate to={'/user'} />
+        return <Navigate to={'/user/:uid'} />
     }
     return (
         <div>
@@ -35,16 +38,9 @@ function Login() {
                         <div className="login_content">
                             <h2>Login</h2>
                             <form action="" className='loginform' onSubmit={handleLoginSubmit}>
-                                <input
-                                    type="text"
-                                    placeholder={'your username'}
-                                    value={username}
-                                    onChange={e => setUsername(e.target.value)}
-                                />
-                                <Link to="/user">
-
-                                    <button className='login_login'>LOGIN</button>
-                                </Link>
+    
+                                    <button className='login_login'>Connect To Wallet</button>
+                                
                                 <div className='login_bottom'>
                                     <div>
                                         Don't have an account yet?

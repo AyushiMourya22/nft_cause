@@ -8,27 +8,29 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Collections from './pages/Collections';
 import User from './pages/User';
-import Nec from './pages/Nec';
-import StarsCanvas from './components/canvas/Stars';
 import CreateOrganisation from './pages/createOrganisation';
-
+import { UserContextProvider } from './Usercontext';
+import Browseorg from './pages/Browseorg';
 
 function App() {
   return (
     <div className="App ">
       <Router>
+        <UserContextProvider>
+
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/collections' element={<Collections/>}/>
-          <Route path='/user' element={<User/>}/>
-          <Route path='/nec' element={<Nec/>}/>
-          <Route path='/browse' element={<Nec/>}/>
-          <Route path='/collections' element={<Collections/>}/>
-          <Route path='/createorganisation' element={<CreateOrganisation/>}/>
+          {/* <Route path='/collections' element={<Collections/>}/> */}
+          <Route path='/user/:uid' element={<User/>}/>
+          <Route path='/user/nft/:uid' element={<Collections/>}/>
+          <Route path='/org/add' element={<CreateOrganisation/>}/>
+          <Route path='/org/active' element={<Browseorg/>}/>
+          
           
         </Routes>
+        </UserContextProvider>
       </Router>
     </div>
   );
