@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const UserDown = () => {
   return (
     <div className='userDown'>
-      <Link to="/org/add">
+      <Link to="/add">
         <button className='btn animate__animated animate__fadeIn'> Create a new Organisation</button>
       </Link>
           

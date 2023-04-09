@@ -22,12 +22,11 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
-          {/* <Route path='/collections' element={<Collections/>}/> */}
-          <Route path='/user/:uid' element={<User/>}/>
-          <Route path='/user/nft/:uid' element={<Collections/>}/>
-          <Route path='/org/add' element={<CreateOrganisation/>}/>
-          <Route path='/org/active' element={<Browseorg/>}/>
-          
+          <Route path='/collections' element={<Collections/>}/>
+          <Route path='/user' element={<User/>}/>
+          <Route path='/collections' element={<Collections/>}/>
+          <Route path='/browse' element={<Browseorg/>}/>
+          <Route path='/add' element={<CreateOrganisation/>}/>
           
         </Routes>
         </UserContextProvider>

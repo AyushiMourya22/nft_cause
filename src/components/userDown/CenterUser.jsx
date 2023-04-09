@@ -7,7 +7,7 @@ const CenterUser = () => {
   return (
     <div className='userCenter'>
        
-            <Link to='/user/nft/:uid'>
+            <Link to='/collections'>
             <div className='collection animate__animated animate__backInDown' >
             <h1>Your Collections</h1>
             <p>See all your collections</p>
@@ -15,7 +15,7 @@ const CenterUser = () => {
         
             </Link>
          
-            <Link to='/org/active'>
+            <Link to='/browse'>
 
             <div className="browse animate__animated animate__backInDown">
             <h1>Browse Organisations</h1>

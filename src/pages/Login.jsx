@@ -10,21 +10,23 @@ import { UserContext } from '../Usercontext'
 function Login() {
     const [username, setUsername] = useState('')
     const [redirect, setRedirect] = useState(false)
-    const {setuser}=useContext(UserContext)
+    const {user,setuser}=useContext(UserContext)
 
     async function handleLoginSubmit(ev) {
         ev.preventDefault()
         try {
-            const userName = await axios.get('/user/:uid', { username })
+            const userName = await axios.post('/login', { username })
             alert('Login successful')
-            setuser(userName.data)
+            setuser(userName)
             setRedirect(true)
+
+
         } catch (e) {
             alert('Login failed')
         }
     }
     if (redirect) {
-        return <Navigate to={'/user/:uid'} />
+        return <Navigate to={'/user'} />
     }
     return (
         <div>
@@ -38,9 +40,16 @@ function Login() {
                         <div className="login_content">
                             <h2>Login</h2>
                             <form action="" className='loginform' onSubmit={handleLoginSubmit}>
-    
-                                    <button className='login_login'>Connect To Wallet</button>
-                                
+                                <input
+                                    type="text"
+                                    placeholder={'your username'}
+                                    value={username}
+                                    onChange={e => setUsername(e.target.value)}
+                                />
+                                <Link to="/user">
+
+                                    <button className='login_login'>LOGIN</button>
+                                </Link>
                                 <div className='login_bottom'>
                                     <div>
                                         Don't have an account yet?

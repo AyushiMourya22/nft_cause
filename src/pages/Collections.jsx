@@ -23,7 +23,7 @@ function Collections() {
               <img src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" className="coll_profile" alt='' />
             </div>
             <div className="coll_profile-name">Beni Smith</div>
-            <p className="coll_about">User Interface Designer and front-end developer</p>
+            <p className="coll_about">FreeLancer</p>
             <button className="coll_msg-btn">Message</button>
             <button className="coll_follow-btn">Following</button>
 
