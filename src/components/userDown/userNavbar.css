@@ -1,0 +1,32 @@
+.userNavbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+
+}
+.logo{width: 11rem;
+    height: 8rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+.Userprofile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    /* width: 10rem; */
+    height: 3rem;
+    border-radius: 10px;
+}
+.userLogo{
+    width: 7rem;
+    height: 6rem;
+    position: relative;
+    right: 30px;
+    bottom: 15px;
+}
+

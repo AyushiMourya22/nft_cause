@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+  }
+    
+    .OrgContainer
+    {
+        margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 4rem;
+
+  }
+  
+  .formOrganisation{
+    /* height: 70vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+  }
+
+  
+  .OrgContainer .box .content
+  {
+    /* position: relative; */
+    left: 0;
+    padding: 2rem 3rem;
+    background: rgba(209, 205, 205, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(197, 187, 187, 0.523);
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(245, 239, 239, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+  }
+  
+  .OrgContainer .box .content h2
+  {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .OrgContainer .box .content p
+  {
+      font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+  }
+  
+  .OrgContainer .box .content .login
+  {
+    display: inline-block;
+    font-size: 1em;
+    color: white;
+    box-shadow: 0 5px 15px rgba(197, 187, 187, 0.523);
+    /* background: #fff; */
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+    border: none;
+}
+.box{
+    width: 100%;
+}
+  
+  form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+  .OrgContainer input{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 5px 15px rgba(197, 187, 187, 0.523);
+      padding: 0.5rem 1.5rem;
+        color:white;
+      border-radius: 20px;
+      border: none;
+      width: 50%;
+  }
+ 
+
+  .newNft{
+    border: none;
+    background: none;
+    color: white;
+    margin: 1rem;
+  }
+  .newNft:hover{
+    cursor: pointer;
+  }
+
+  .logo{
+    width: 11rem;
+    height: 8rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+  }
